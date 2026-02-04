@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alia Begum | Data Analyst Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #ffbd39; /* Your signature gold */
+            --bg: #0b0f1a;
+            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+        /* Animated Background */
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 80% 20%, #1e293b 0%, transparent 40%),
+                        radial-gradient(circle at 10% 80%, #0f172a 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* Nav */
+        nav { position: fixed; width: 100%; padding: 20px 10%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; background: rgba(11, 15, 26, 0.8); backdrop-filter: blur(10px); }
+        nav a { color: var(--text); text-decoration: none; font-weight: 600; margin-left: 30px; transition: 0.3s; }
+        nav a:hover { color: var(--primary); }
+
+        /* Hero */
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10%; }
+        .hero h1 { font-size: 4.5rem; margin-bottom: 10px; }
+        .hero h1 span { color: var(--primary); }
+        #type-text { font-size: 1.8rem; color: var(--text-dim); min-height: 1.6em; }
+
+        /* Sections */
+        section { padding: 100px 10%; }
+        .title { font-size: 2.5rem; margin-bottom: 50px; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        /* Glass Cards */
+        .card { background: var(--glass); backdrop-filter: blur(15px); border: 1px solid var(--border); padding: 40px; border-radius: 24px; transition: 0.4s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+        /* Skills */
+        .skill-bar { margin-bottom: 20px; }
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; }
+        .bar-bg { background: rgba(255,255,255,0.1); height: 10px; border-radius: 5px; overflow: hidden; }
+        .bar-fill { height: 100%; background: var(--primary); width: 0; transition: 2s cubic-bezier(0.17, 0.85, 0.438, 1); }
+
+        /* Forms */
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border-radius: 12px; border: 1px solid var(--border); background: var(--glass); color: white; outline: none; }
+        input:focus { border-color: var(--primary); }
+        .btn { background: var(--primary); color: #000; padding: 15px 40px; border-radius: 50px; font-weight: 700; border: none; cursor: pointer; display: inline-block; transition: 0.3s; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 189, 57, 0.4); }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-size: 1.5rem; font-weight: 800; color: var(--primary);">AB.</div>
+        <div class="links">
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <p style="letter-spacing: 5px; font-weight: 300; margin-bottom: 10px;">HELLO, I'M</p>
+            <h1>Alia <span>Begum</span></h1>
+            <div id="type-text"></div>
+            <p style="margin-top: 20px; color: var(--text-dim);">A Data Analyst with 2.5 years of experience in Retail & Ecommerce</p>
+            <a href="#projects" class="btn" style="margin-top: 30px;">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="title">My Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Technical Skills</h3>
+                <br>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>Python</span><span>70%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-percent="70%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>Power BI</span><span>95%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-percent="95%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>SQL</span><span>60%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" data-percent="60%"></div></div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Background</h3>
+                <p>Bachelor of Science graduate from Utkal University. Specializing in Retail, Ecommerce, and Business Finance domains. I love to solve business problems & uncover hidden data stories.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="title">Featured Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-database fa-2x" style="color: var(--primary);"></i>
+                <h3 style="margin: 20px 0 10px;">Amazon SQL Analysis</h3>
+                <p>Sales store data analysis using SQL to drive business growth.</p>
+                <a href="https://github.com/aliya1723/SQL-project" style="color: var(--primary); text-decoration: none; margin-top: 15px; display: block;">View on GitHub →</a>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line fa-2x" style="color: var(--primary);"></i>
+                <h3 style="margin: 20px 0 10px;">Prime Video Dashboard</h3>
+                <p>Advanced EDA on Amazon Prime data using Power BI to improve customer interest.</p>
+                <a href="https://github.com/aliya1723/Power-bi" style="color: var(--primary); text-decoration: none; margin-top: 15px; display: block;">View on GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="title">Get In Touch</h2>
+        <div class="grid" style="grid-template-columns: 1fr 1.5fr;">
+            <div class="contact-details">
+                <div class="card" style="margin-bottom: 20px;">
+                    <p><i class="fas fa-envelope"></i> aliabegum754@gmail.com</p>
+                </div>
+                <div class="card">
+                    <p><i class="fas fa-phone"></i> +91 8917626557</p>
+                </div>
+            </div>
+            <div class="card">
+                <form id="contact-form" action="https://formspree.io/f/your-id-here" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="How can I help you?" required></textarea>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    <p id="form-status" style="margin-top: 15px; text-align: center;"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 50px; border-top: 1px solid var(--border);">
+        <p>© 2026 Alia Begum. Built with ❤️ and Data.</p>
+    </footer>
+
+    <script>
+        // Typing Effect
+        const phrases = ["Designer", "Analyst", "Creator"];
+        let i = 0, j = 0, current = "", isDeleting = false;
+        function type() {
+            const display = document.getElementById("type-text");
+            const fullText = phrases[i];
+            current = isDeleting ? fullText.substring(0, j--) : fullText.substring(0, j++);
+            display.innerHTML = current;
+            if (!isDeleting && j === fullText.length + 1) { isDeleting = true; setTimeout(type, 2000); }
+            else if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % phrases.length; setTimeout(type, 500); }
+            else { setTimeout(type, isDeleting ? 50 : 150); }
+        }
+        type();
+
+        // Skill Bar Animation on Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+                        bar.style.width = bar.getAttribute('data-percent');
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(document.querySelector('#about'));
+
+        // Formspree Handling
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const status = document.getElementById("form-status");
+            const data = new FormData(form);
+            const response = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+            if (response.ok) { status.innerHTML = "Success! I will contact you soon."; form.reset(); }
+            else { status.innerHTML = "Oops! Error sending message."; }
+        });
+    </script>
+</body>
+</html>
